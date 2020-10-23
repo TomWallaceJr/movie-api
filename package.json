@@ -2,7 +2,7 @@
   "name": "movie-api-larue-tom",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinkful-ei-shark/movie-api-larue-tom.git"
+    "url": "git+https://github.com/TomWallaceJr/movie-api.git"
   },
   "keywords": [],
   "engines": {
@@ -28,7 +28,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thinkful-ei-shark/movie-api-larue-tom/issues"
+    "url": "https://github.com/TomWallaceJr/movie-api.git/issues"
   },
-  "homepage": "https://github.com/thinkful-ei-shark/movie-api-larue-tom#readme"
+  "homepage": "https://github.com/TomWallaceJr/movie-api.git#readme"
 }
