@@ -1,5 +1,4 @@
-
- [
+module.exports = [
   {
     'filmtv_ID': 2,
     'film_title': 'Bugs Bunny\'s Third Movie: 1001 Rabbit Tales',
@@ -1057,4 +1056,3 @@
     'votes': 3
   }
 ];
-  
