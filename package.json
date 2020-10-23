@@ -13,13 +13,18 @@
     "nodemon": "^2.0.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thinkful-ei-shark/movie-api-larue-tom.git"
   },
   "keywords": [],
+  "engines": {
+    "node": "12.18.3"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {

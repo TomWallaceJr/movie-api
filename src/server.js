@@ -7,8 +7,8 @@ const movies = require('./movielibrary.json');
 const app = express();
 
 
-
-app.use(morgan('dev'));
+const morganSetting = process.env.NODE_ENV === 'production' ? 'tiny' : 'common'
+app.use(morgan(morganSetting))
 app.use(cors());
 app.use(helmet());
 
@@ -45,9 +45,20 @@ app.get('/movie', function getMovies(req, res) {
     );
   }
   res.json(reply);
-  const PORT = 8000;
-  app.listen(PORT, () => {
-    console.log(`Server listening at http://localhost:${PORT}`);
-  });
-
 });
+
+// 4 parameters in middleware, express knows to treat this as error handler
+app.use((error, req, res, next) => {
+  let response
+  if (process.env.NODE_ENV === 'production') {
+    response = { error: { message: 'server error' } }
+  } else {
+    response = { error }
+  }
+  res.status(500).json(response)
+})
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server listening at http://localhost:${PORT}`);
+})
